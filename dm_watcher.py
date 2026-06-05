@@ -1,4 +1,3 @@
-# dm_watcher.py
 import discord
 import requests
 from datetime import datetime
@@ -31,7 +30,6 @@ class DMWatcher(discord.Client):
         print(f'✅ DM Watcher Online: {self.user}')
     
     async def on_message(self, message):
-        # Print EVERY message the bot sees
         print(f"\n📨 Message seen:")
         print(f"   Channel type: {type(message.channel).__name__}")
         print(f"   Is DM: {isinstance(message.channel, discord.DMChannel)}")
@@ -54,6 +52,7 @@ class DMWatcher(discord.Client):
         else:
             print("   ⏭️ Not a DM, skipping")
 
-print("Starting DM Watcher...")
-client = DMWatcher(intents=discord.Intents.all())
-client.run(DISCORD_BOT_TOKEN)
+if __name__ == "__main__":
+    print("Starting DM Watcher...")
+    client = DMWatcher(intents=discord.Intents.all())
+    client.run(DISCORD_BOT_TOKEN)
