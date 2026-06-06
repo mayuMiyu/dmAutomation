@@ -1,4 +1,9 @@
-/.vscode
+.vscode
 .env
 /__pycache__
 **/node_modules
+**/dist
+**/__pycache__
+*.pyc
+frontend/.vite
+backend/config.json
