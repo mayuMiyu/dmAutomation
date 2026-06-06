@@ -1,7 +1,12 @@
 import uiautomation as auto
 import time 
 import re
-from dm_watcher import send_telegram
+from backend.sender_tg import send_telegram
+from backend.toggleDiscordVisibility import discordVisibility
+
+toggle = False
+if toggle:
+    discordVisibility()
 
 def getMessageCount():
     discord = auto.PaneControl(searchDepth=1, SubName="Discord")
@@ -28,7 +33,7 @@ print(f"Current Message Request Count on start: {last_count} (won't send notific
 print("watching for new message requests...")
 
 while True:
-    time.sleep(30)
+    time.sleep(3)
     current_count = getMessageCount()
 
     if current_count is None:
