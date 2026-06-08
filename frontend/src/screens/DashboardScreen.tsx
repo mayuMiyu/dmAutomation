@@ -16,8 +16,8 @@ export function DashboardScreen() {
   ]);
 
   return (
-    <div className="flex-1 flex flex-col p-8 h-full pb-6 relative z-10">
-      <div className="flex items-center justify-between mb-8">
+    <div className="flex-1 flex flex-col p-6 h-full max-h-full overflow-hidden relative z-10">
+      <div className="flex items-center justify-between mb-4">
         <h1 className={`text-xl font-semibold tracking-tight flex items-center gap-2 ${
           isMinimal ? "text-white" : "text-purple-800 font-bold"
         }`}>
@@ -51,8 +51,8 @@ export function DashboardScreen() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center py-6">
-        <div className={`flex items-center gap-2 mb-10 px-4 py-1.5 rounded-full ${
+      <div className="flex flex-col items-center justify-center py-3">
+        <div className={`flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full ${
           isMinimal ? "" : isRunning ? "bg-green-100" : "bg-pink-100"
         }`}>
           <div className={`w-2 h-2 rounded-full ${
@@ -78,7 +78,7 @@ export function DashboardScreen() {
               ? `rounded-full border ${isRunning
                   ? "bg-neutral-900/50 border-emerald-500/30 text-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.1)]"
                   : "bg-neutral-900 border-neutral-800 text-neutral-300"}`
-              : `rounded-[2rem] border-4 border-white shadow-xl ${isRunning
+              : `rounded-full border-1 border-purple-500 shadow-xl ${isRunning
                   ? "bg-gradient-to-br from-green-100 to-emerald-100 text-green-700 shadow-green-200/50"
                   : "bg-gradient-to-br from-pink-100 to-purple-100 text-purple-700 shadow-pink-200/50"}`
           }`}
@@ -104,7 +104,7 @@ export function DashboardScreen() {
         </motion.button>
       </div>
 
-      <div className="mt-8 flex-1">
+      <div className="mt-4 flex-1">
         <div className="flex items-center gap-2 mb-4">
           <Activity className={`w-4 h-4 ${isMinimal ? "text-neutral-500" : "text-purple-400"}`} />
           <h2 className={`text-xs font-semibold uppercase tracking-wider ${
@@ -135,7 +135,7 @@ export function DashboardScreen() {
         </div>
       </div>
 
-      <div className="text-center pt-6 mt-auto">
+      <div className="text-center pt-2 mt-auto">
         <p className={`text-xs font-medium ${
           isRunning
             ? isMinimal ? "text-emerald-500/70" : "text-green-500"

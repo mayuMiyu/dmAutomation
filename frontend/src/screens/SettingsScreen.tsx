@@ -11,8 +11,8 @@ export function SettingsScreen() {
   const [hideOffScreen, setHideOffScreen] = useState(true);
 
   return (
-    <div className="flex-1 flex flex-col p-8 h-full relative z-10">
-      <div className="flex items-center gap-3 mb-8">
+    <div className="flex-1 flex flex-col p-6 h-full max-h-full overflow-hidden relative z-10">
+      <div className="flex items-center gap-3 mb-3">
         <motion.button
           whileHover={{ x: -2 }}
           whileTap={{ scale: 0.95 }}
@@ -30,7 +30,7 @@ export function SettingsScreen() {
         }`}>Settings</h1>
       </div>
 
-      <div className="flex-1 flex flex-col gap-6 pb-2">
+      <div className="flex-1 flex flex-col gap-3 pb-2">
         <div className={`flex items-center justify-between py-2 border-b ${
           isMinimal ? "border-neutral-800/50" : "border-pink-100"
         }`}>
@@ -139,7 +139,7 @@ export function SettingsScreen() {
           </motion.button>
         </div>
 
-        <div className="mt-auto pt-6">
+        <div className="pt-4">
           <motion.button
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.98 }}

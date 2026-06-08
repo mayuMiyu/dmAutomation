@@ -17,9 +17,9 @@ export function SetupScreen() {
   ];
 
   return (
-    <div className="flex-1 flex flex-col p-8 h-full relative z-10">
+    <div className="flex-1 flex flex-col p-6 h-full max-h-full overflow-hidden relative z-10">
       <div className="flex-1 flex flex-col w-full mx-auto pb-4">
-        <div className="mb-10 pt-4 text-center">
+        <div className="mb-4 pt-2 text-center">
           {!isMinimal && (
             <motion.div
               initial={{ scale: 0 }}
@@ -38,7 +38,7 @@ export function SetupScreen() {
           </p>
         </div>
 
-        <div className="space-y-3 mb-12">
+        <div className="space-y-4 mb-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
